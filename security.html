@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SecurePay Security - Enterprise-grade security with AES-256 encryption, KYC verification, PCI DSS compliance, and fraud detection.">
+  <title>Security - SecurePay Escrow</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128274;</text></svg>">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-shield-halved"></i>
+        <span>Secure<span class="highlight">Pay</span></span>
+      </a>
+
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link active">Services <i class="fas fa-chevron-down" style="font-size: 0.625rem; margin-left: 4px;"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="how-it-works.html" class="nav-dropdown-item">How It Works</a>
+            <a href="security.html" class="nav-dropdown-item">Security</a>
+            <a href="deals.html" class="nav-dropdown-item">Deals</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+        <a href="#" class="btn btn-primary" data-modal="create-deal-modal">
+          <i class="fas fa-plus"></i> Create Deal
+        </a>
+      </div>
+
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Enterprise-Grade <span class="text-gradient">Security</span></h1>
+      <p>Your money and data are protected by the same security trusted by Fortune 500 companies.</p>
+    </div>
+  </section>
+
+  <!-- Security Features -->
+  <section class="security-features section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Security <span class="text-gradient">Architecture</span></h2>
+        <p>Multi-layered protection designed from the ground up for financial transactions.</p>
+      </div>
+
+      <div class="security-grid">
+        <div class="card security-card" data-animate>
+          <div class="security-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>AES-256 Encryption</h3>
+          <p>All data encrypted at rest and in transit using AES-256, the same standard used by banks and governments worldwide. Your sensitive information is never stored in plain text.</p>
+        </div>
+
+        <div class="card security-card" data-animate data-delay="1">
+          <div class="security-icon">
+            <i class="fas fa-fingerprint"></i>
+          </div>
+          <h3>Identity Verification</h3>
+          <p>Comprehensive KYC/AML verification process including document verification, biometric authentication, and real-time identity validation against global databases.</p>
+        </div>
+
+        <div class="card security-card" data-animate data-delay="2">
+          <div class="security-icon">
+            <i class="fas fa-credit-card"></i>
+          </div>
+          <h3>PCI DSS Compliant</h3>
+          <p>Payment Card Industry Data Security Standard Level 1 certification ensures all payment card data is handled with the highest level of security and compliance.</p>
+        </div>
+
+        <div class="card security-card" data-animate>
+          <div class="security-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>24/7 Monitoring</h3>
+          <p>Dedicated security team monitors all transactions and systems around the clock. Suspicious activity triggers immediate investigation and response protocols.</p>
+        </div>
+
+        <div class="card security-card" data-animate data-delay="1">
+          <div class="security-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>AI Fraud Detection</h3>
+          <p>Machine learning algorithms analyze transaction patterns in real-time, detecting and preventing fraudulent activity before it impacts your transaction.</p>
+        </div>
+
+        <div class="card security-card" data-animate data-delay="2">
+          <div class="security-icon">
+            <i class="fas fa-file-shield"></i>
+          </div>
+          <h3>Immutable Audit Logs</h3>
+          <p>Every action is recorded in tamper-proof audit logs. Complete transparency for compliance, dispute resolution, and forensic analysis when needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Stats -->
+  <section class="security-stats">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Security <span class="text-gradient">Metrics</span></h2>
+        <p>Real numbers that demonstrate our commitment to security.</p>
+      </div>
+
+      <div class="security-stats-grid">
+        <div class="card" data-animate style="text-align: center; padding: var(--spacing-2xl);">
+          <div style="font-size: 3rem; font-weight: 800; color: var(--green-primary);">0</div>
+          <div style="font-size: 1rem; font-weight: 600; margin-bottom: 4px;">Security Breaches</div>
+          <div style="font-size: 0.875rem; color: var(--text-muted);">Since founding in 2018</div>
+        </div>
+
+        <div class="card" data-animate data-delay="1" style="text-align: center; padding: var(--spacing-2xl);">
+          <div style="font-size: 3rem; font-weight: 800; color: var(--green-primary);">99.99%</div>
+          <div style="font-size: 1rem; font-weight: 600; margin-bottom: 4px;">System Uptime</div>
+          <div style="font-size: 0.875rem; color: var(--text-muted);">Last 12 months</div>
+        </div>
+
+        <div class="card" data-animate data-delay="2" style="text-align: center; padding: var(--spacing-2xl);">
+          <div style="font-size: 3rem; font-weight: 800; color: var(--green-primary);">< 100ms</div>
+          <div style="font-size: 1rem; font-weight: 600; margin-bottom: 4px;">Threat Detection</div>
+          <div style="font-size: 0.875rem; color: var(--text-muted);">Average response time</div>
+        </div>
+
+        <div class="card" data-animate data-delay="3" style="text-align: center; padding: var(--spacing-2xl);">
+          <div style="font-size: 3rem; font-weight: 800; color: var(--green-primary);">100%</div>
+          <div style="font-size: 1rem; font-weight: 600; margin-bottom: 4px;">Data Encrypted</div>
+          <div style="font-size: 0.875rem; color: var(--text-muted);">All user data at rest</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Risk Management -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid" data-animate>
+        <div class="about-text">
+          <h2>Risk <span class="text-gradient">Management</span></h2>
+          <p>Our comprehensive risk management framework protects against every type of threat.</p>
+
+          <div style="margin-top: var(--spacing-xl);">
+            <div style="display: flex; align-items: flex-start; gap: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+              <div style="width: 50px; height: 50px; border-radius: var(--radius-lg); background: var(--green-rgba); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-server" style="color: var(--green-primary);"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 4px;">Infrastructure Security</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Redundant servers across multiple data centers with DDoS protection and automatic failover.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+              <div style="width: 50px; height: 50px; border-radius: var(--radius-lg); background: var(--green-rgba); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-user-lock" style="color: var(--green-primary);"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 4px;">Access Controls</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Role-based access, multi-factor authentication, and zero-trust architecture.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+              <div style="width: 50px; height: 50px; border-radius: var(--radius-lg); background: var(--green-rgba); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-bug-slash" style="color: var(--green-primary);"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 4px;">Vulnerability Management</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Continuous penetration testing, bug bounty program, and regular security audits.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+              <div style="width: 50px; height: 50px; border-radius: var(--radius-lg); background: var(--green-rgba); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-life-ring" style="color: var(--green-primary);"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 4px;">Incident Response</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">24/7 incident response team with documented procedures and automatic alerts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <i class="fas fa-chart-line"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certifications section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Certifications & <span class="text-gradient">Compliance</span></h2>
+        <p>Verified by independent auditors and regulatory bodies worldwide.</p>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card" data-animate>
+          <div class="cert-icon"><i class="fas fa-shield-check"></i></div>
+          <h4 class="cert-name">SOC 2 Type II</h4>
+          <p class="cert-desc">Audited security, availability, processing integrity, confidentiality, and privacy.</p>
+        </div>
+
+        <div class="cert-card" data-animate data-delay="1">
+          <div class="cert-icon"><i class="fas fa-credit-card"></i></div>
+          <h4 class="cert-name">PCI DSS Level 1</h4>
+          <p class="cert-desc">Highest level of payment card industry compliance for data security.</p>
+        </div>
+
+        <div class="cert-card" data-animate data-delay="2">
+          <div class="cert-icon"><i class="fas fa-globe"></i></div>
+          <h4 class="cert-name">GDPR Compliant</h4>
+          <p class="cert-desc">Full compliance with European Union data protection regulations.</p>
+        </div>
+
+        <div class="cert-card" data-animate data-delay="3">
+          <div class="cert-icon"><i class="fas fa-building-columns"></i></div>
+          <h4 class="cert-name">Bank-Grade Security</h4>
+          <p class="cert-desc">FDIC-insured segregated accounts with bank-level security protocols.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Dashboard Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Advanced Threat <span class="text-gradient">Prevention</span></h2>
+        <p>Our AI-powered systems stop threats before they become problems.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="card" data-animate style="text-align: left; padding: var(--spacing-xl);">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--spacing-lg);">
+            <h4 style="font-size: 1rem;"><i class="fas fa-chart-pie" style="color: var(--green-primary); margin-right: 8px;"></i> Threat Analysis</h4>
+            <span style="font-size: 0.75rem; color: var(--green-primary); background: var(--green-rgba); padding: 4px 12px; border-radius: var(--radius-full);">Live</span>
+          </div>
+          <div style="margin-bottom: var(--spacing-md);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span style="font-size: 0.875rem; color: var(--text-muted);">Blocked Transactions</span>
+              <span style="font-size: 0.875rem; font-weight: 600; color: var(--green-primary);">12,847</span>
+            </div>
+            <div style="height: 8px; background: var(--bg-card-solid); border-radius: var(--radius-full); overflow: hidden;">
+              <div style="height: 100%; width: 85%; background: linear-gradient(90deg, var(--green-primary), var(--green-accent)); border-radius: var(--radius-full);"></div>
+            </div>
+          </div>
+          <div style="margin-bottom: var(--spacing-md);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span style="font-size: 0.875rem; color: var(--text-muted);">Flagged Accounts</span>
+              <span style="font-size: 0.875rem; font-weight: 600; color: #f59e0b;">234</span>
+            </div>
+            <div style="height: 8px; background: var(--bg-card-solid); border-radius: var(--radius-full); overflow: hidden;">
+              <div style="height: 100%; width: 15%; background: #f59e0b; border-radius: var(--radius-full);"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span style="font-size: 0.875rem; color: var(--text-muted);">Resolved Disputes</span>
+              <span style="font-size: 0.875rem; font-weight: 600; color: #3b82f6;">1,523</span>
+            </div>
+            <div style="height: 8px; background: var(--bg-card-solid); border-radius: var(--radius-full); overflow: hidden;">
+              <div style="height: 100%; width: 45%; background: #3b82f6; border-radius: var(--radius-full);"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-animate data-delay="1" style="text-align: left; padding: var(--spacing-xl);">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--spacing-lg);">
+            <h4 style="font-size: 1rem;"><i class="fas fa-clock" style="color: var(--green-primary); margin-right: 8px;"></i> Response Times</h4>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md); background: var(--bg-card-solid); border-radius: var(--radius-md);">
+              <span style="font-size: 0.875rem; color: var(--text-muted);">Threat Detection</span>
+              <span style="font-size: 1rem; font-weight: 600; color: var(--green-primary);">45ms</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md); background: var(--bg-card-solid); border-radius: var(--radius-md);">
+              <span style="font-size: 0.875rem; color: var(--text-muted);">Auto-Block</span>
+              <span style="font-size: 1rem; font-weight: 600; color: var(--green-primary);">92ms</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md); background: var(--bg-card-solid); border-radius: var(--radius-md);">
+              <span style="font-size: 0.875rem; color: var(--text-muted);">Support Response</span>
+              <span style="font-size: 1rem; font-weight: 600; color: var(--green-primary);">< 1hr</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md); background: var(--bg-card-solid); border-radius: var(--radius-md);">
+              <span style="font-size: 0.875rem; color: var(--text-muted);">Dispute Resolution</span>
+              <span style="font-size: 1rem; font-weight: 600; color: var(--green-primary);">5-7 days</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-animate data-delay="2" style="text-align: left; padding: var(--spacing-xl);">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--spacing-lg);">
+            <h4 style="font-size: 1rem;"><i class="fas fa-layer-group" style="color: var(--green-primary); margin-right: 8px;"></i> Protection Layers</h4>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+            <div style="display: flex; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-sm);">
+              <i class="fas fa-check-circle" style="color: var(--green-primary);"></i>
+              <span style="font-size: 0.875rem;">Multi-Signature Wallets</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-sm);">
+              <i class="fas fa-check-circle" style="color: var(--green-primary);"></i>
+              <span style="font-size: 0.875rem;">Biometric Authentication</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-sm);">
+              <i class="fas fa-check-circle" style="color: var(--green-primary);"></i>
+              <span style="font-size: 0.875rem;">Real-Time Fraud Monitoring</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-sm);">
+              <i class="fas fa-check-circle" style="color: var(--green-primary);"></i>
+              <span style="font-size: 0.875rem;">Anomaly Detection AI</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-sm);">
+              <i class="fas fa-check-circle" style="color: var(--green-primary);"></i>
+              <span style="font-size: 0.875rem;">Secure Data Centers</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-sm);">
+              <i class="fas fa-check-circle" style="color: var(--green-primary);"></i>
+              <span style="font-size: 0.875rem;">End-to-End Encryption</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta section">
+    <div class="container">
+      <div class="cta-card" data-animate>
+        <h2>Your Security Is Our <span class="text-gradient">Priority</span></h2>
+        <p>Have questions about our security practices? Our team is available to discuss your specific needs.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-shield-halved"></i> Contact Security Team
+          </a>
+          <a href="#" class="btn btn-secondary btn-lg">
+            <i class="fas fa-file-pdf"></i> Security Whitepaper
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <i class="fas fa-shield-halved"></i>
+            <span>Secure<span class="highlight">Pay</span></span>
+          </a>
+          <p>Enterprise-grade escrow services for secure transactions between buyers and sellers worldwide.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Product</h5>
+          <ul class="footer-links">
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="deals.html">Deals</a></li>
+            <li><a href="wallet.html">Wallet</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Company</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Support</h5>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">API Documentation</a></li>
+            <li><a href="disputes.html">Dispute Center</a></li>
+            <li><a href="#">Status Page</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 SecurePay Escrow. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

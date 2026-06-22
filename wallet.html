@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SecurePay Wallet - Manage your escrow funds, deposits, withdrawals, and transaction history.">
+  <title>Wallet - SecurePay Escrow</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128274;</text></svg>">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <i class="fas fa-shield-halved"></i>
+        <span>Secure<span style="color: var(--green-primary);">Pay</span></span>
+      </div>
+
+      <nav class="sidebar-menu">
+        <span class="sidebar-menu-title">Main Menu</span>
+        <div class="sidebar-menu-items">
+          <a href="dashboard.html" class="sidebar-link">
+            <i class="fas fa-chart-grid"></i>
+            <span>Overview</span>
+          </a>
+          <a href="deals.html" class="sidebar-link">
+            <i class="fas fa-file-contract"></i>
+            <span>Deals</span>
+          </a>
+          <a href="wallet.html" class="sidebar-link active">
+            <i class="fas fa-wallet"></i>
+            <span>Wallet</span>
+          </a>
+          <a href="disputes.html" class="sidebar-link">
+            <i class="fas fa-gavel"></i>
+            <span>Disputes</span>
+          </a>
+        </div>
+      </nav>
+
+      <nav class="sidebar-menu">
+        <span class="sidebar-menu-title">Analytics</span>
+        <div class="sidebar-menu-items">
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-chart-line"></i>
+            <span>Reports</span>
+          </a>
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-chart-bar"></i>
+            <span>Statistics</span>
+          </a>
+        </div>
+      </nav>
+
+      <nav class="sidebar-menu">
+        <span class="sidebar-menu-title">Settings</span>
+        <div class="sidebar-menu-items">
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-gear"></i>
+            <span>Settings</span>
+          </a>
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-user-circle"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-avatar">JD</div>
+          <div>
+            <div class="sidebar-user-name">John Doe</div>
+            <div class="sidebar-user-email">john@company.com</div>
+          </div>
+        </div>
+        <a href="index.html" class="btn btn-secondary btn-sm" style="width: 100%;">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <div class="dashboard-header">
+        <div class="dashboard-title">
+          <h1>Wallet</h1>
+          <p>Manage your funds, deposits, and withdrawals.</p>
+        </div>
+        <div class="dashboard-actions">
+          <button class="notification-btn">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Wallet Balance Cards -->
+      <div class="wallet-cards" data-animate>
+        <div class="card wallet-card">
+          <div class="wallet-card-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <div class="wallet-card-label">Total Balance</div>
+          <div class="wallet-card-value">$89,750.00</div>
+        </div>
+
+        <div class="card wallet-card" data-animate data-delay="1">
+          <div class="wallet-card-icon" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6;">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="wallet-card-label">In Escrow</div>
+          <div class="wallet-card-value" style="color: #3b82f6;">$142,580.00</div>
+        </div>
+
+        <div class="card wallet-card" data-animate data-delay="2">
+          <div class="wallet-card-icon" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="wallet-card-label">Pending Release</div>
+          <div class="wallet-card-value" style="color: #f59e0b;">$12,300.00</div>
+        </div>
+
+        <div class="card wallet-card" data-animate data-delay="3">
+          <div class="wallet-card-icon" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6;">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="wallet-card-label">Available to Withdraw</div>
+          <div class="wallet-card-value" style="color: #8b5cf6;">$89,750.00</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="wallet-actions" data-animate>
+        <button class="btn btn-primary btn-lg" data-modal="deposit-modal">
+          <i class="fas fa-plus"></i> Deposit Funds
+        </button>
+        <button class="btn btn-secondary btn-lg" data-modal="withdraw-modal">
+          <i class="fas fa-arrow-up"></i> Withdraw Funds
+        </button>
+        <button class="btn btn-outline btn-lg">
+          <i class="fas fa-exchange-alt"></i> Transfer
+        </button>
+      </div>
+
+      <!-- Main Wallet Card -->
+      <div class="card" style="background: linear-gradient(135deg, var(--bg-card-solid), rgba(34, 197, 94, 0.15)); border-color: rgba(34, 197, 94, 0.3); margin-bottom: var(--spacing-xl);" data-animate>
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--spacing-lg);">
+          <div>
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 4px;">SecurePay Wallet</p>
+            <h2 style="font-size: 2.5rem; font-weight: 700;">$89,750.00</h2>
+            <p style="font-size: 0.875rem; color: var(--green-primary);"><i class="fas fa-shield-check" style="margin-right: 4px;"></i> FDIC Insured & Encrypted</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+            <button class="btn btn-primary" data-modal="deposit-modal">
+              <i class="fas fa-plus"></i> Add Funds
+            </button>
+            <button class="btn btn-secondary" data-modal="withdraw-modal">
+              <i class="fas fa-arrow-up"></i> Withdraw
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts & Transactions Grid -->
+      <div class="charts-grid">
+        <!-- Transaction History -->
+        <div class="card transaction-card" data-animate>
+          <div class="transaction-header">
+            <h4 class="transaction-title">Transaction History</h4>
+            <a href="#" style="font-size: 0.875rem; color: var(--green-primary);">View all</a>
+          </div>
+          <div class="transaction-list">
+            <div class="transaction-item">
+              <div class="transaction-icon deposit">
+                <i class="fas fa-arrow-down"></i>
+              </div>
+              <div class="transaction-info">
+                <div class="transaction-name">Deposit</div>
+                <div class="transaction-date">Bank Transfer - Jan 15, 2025</div>
+              </div>
+              <div class="transaction-amount positive">+$15,000.00</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon release">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="transaction-info">
+                <div class="transaction-name">Escrow Release</div>
+                <div class="transaction-date">Deal ESC-2024-78291 - Jan 14, 2025</div>
+              </div>
+              <div class="transaction-amount positive">+$24,850.00</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon escrow">
+                <i class="fas fa-lock"></i>
+              </div>
+              <div class="transaction-info">
+                <div class="transaction-name">Escrow Lock</div>
+                <div class="transaction-date">Deal ESC-2024-78302 - Jan 13, 2025</div>
+              </div>
+              <div class="transaction-amount negative">-$32,000.00</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon withdraw">
+                <i class="fas fa-arrow-up"></i>
+              </div>
+              <div class="transaction-info">
+                <div class="transaction-name">Withdrawal</div>
+                <div class="transaction-date">Bank Transfer - Jan 12, 2025</div>
+              </div>
+              <div class="transaction-amount negative">-$8,500.00</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon deposit">
+                <i class="fas fa-arrow-down"></i>
+              </div>
+              <div class="transaction-info">
+                <div class="transaction-name">Deposit</div>
+                <div class="transaction-date">Credit Card - Jan 10, 2025</div>
+              </div>
+              <div class="transaction-amount positive">+$5,000.00</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon release">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="transaction-info">
+                <div class="transaction-name">Escrow Release</div>
+                <div class="transaction-date">Deal ESC-2024-78280 - Jan 8, 2025</div>
+              </div>
+              <div class="transaction-amount positive">+$12,000.00</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wallet Analytics -->
+        <div class="card" data-animate data-delay="1">
+          <div class="chart-header">
+            <h4 class="chart-title">Monthly Activity</h4>
+            <div class="chart-filter">
+              <button class="chart-filter-btn active">6M</button>
+              <button class="chart-filter-btn">1Y</button>
+            </div>
+          </div>
+
+          <div style="padding: var(--spacing-md);">
+            <div style="margin-bottom: var(--spacing-xl);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-md);">
+                <span style="font-size: 0.9375rem; font-weight: 500;">Total Deposits</span>
+                <span style="font-size: 0.9375rem; font-weight: 600; color: var(--green-primary);">+$125,400</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-md);">
+                <span style="font-size: 0.9375rem; font-weight: 500;">Total Released</span>
+                <span style="font-size: 0.9375rem; font-weight: 600; color: #3b82f6;">+$98,200</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-md);">
+                <span style="font-size: 0.9375rem; font-weight: 500;">Total Withdrawals</span>
+                <span style="font-size: 0.9375rem; font-weight: 600; color: #ef4444;">-$45,000</span>
+              </div>
+              <div style="border-top: 1px solid var(--border-color); padding-top: var(--spacing-md); display: flex; justify-content: space-between;">
+                <span style="font-size: 0.9375rem; font-weight: 600;">Net Change</span>
+                <span style="font-size: 0.9375rem; font-weight: 600; color: var(--green-primary);">+$80,400</span>
+              </div>
+            </div>
+
+            <div style="background: var(--bg-card-solid); border-radius: var(--radius-lg); padding: var(--spacing-lg);">
+              <h5 style="font-size: 0.875rem; margin-bottom: var(--spacing-md);">Quick Stats</h5>
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md);">
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; font-weight: 700; color: var(--green-primary);">47</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Transactions</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; font-weight: 700; color: #3b82f6;">18</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Escrow Deals</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; font-weight: 700; color: #f59e0b;">12</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Deposits</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; font-weight: 700; color: #8b5cf6;">8</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Withdrawals</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="card" style="margin-top: var(--spacing-xl);" data-animate>
+        <div class="chart-header">
+          <h4 class="chart-title">Linked Payment Methods</h4>
+          <button class="btn btn-outline btn-sm">
+            <i class="fas fa-plus"></i> Add New
+          </button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md); padding-top: var(--spacing-md);">
+          <div style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-md); background: var(--bg-card-solid); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+            <div style="width: 50px; height: 50px; border-radius: var(--radius-md); background: linear-gradient(135deg, #1a1a6c, #4a4ab8); display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-building-columns" style="color: white; font-size: 1.25rem;"></i>
+            </div>
+            <div style="flex: 1;">
+              <div style="font-weight: 500;">Chase Bank</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">****4521 - Primary</div>
+            </div>
+            <span class="deal-status completed">Verified</span>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-md); background: var(--bg-card-solid); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+            <div style="width: 50px; height: 50px; border-radius: var(--radius-md); background: linear-gradient(135deg, #ff6b6b, #ee5a5a); display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-credit-card" style="color: white; font-size: 1.25rem;"></i>
+            </div>
+            <div style="flex: 1;">
+              <div style="font-weight: 500;">Visa Card</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">****8834</div>
+            </div>
+            <span class="deal-status completed">Verified</span>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-md); background: var(--bg-card-solid); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+            <div style="width: 50px; height: 50px; border-radius: var(--radius-md); background: linear-gradient(135deg, #f7931a, #ffb347); display: flex; align-items: center; justify-content: center;">
+              <i class="fab fa-bitcoin" style="color: white; font-size: 1.25rem;"></i>
+            </div>
+            <div style="flex: 1;">
+              <div style="font-weight: 500;">Bitcoin Wallet</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">bc1q...7x8k</div>
+            </div>
+            <span class="deal-status completed">Verified</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Deposit Modal -->
+  <div class="modal-overlay" id="deposit-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fas fa-plus-circle" style="color: var(--green-primary); margin-right: 8px;"></i> Deposit Funds</h3>
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form data-validate>
+          <div class="form-group">
+            <label class="form-label">Amount (USD)</label>
+            <input type="number" class="form-input" placeholder="Enter amount" required min="10">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Payment Method</label>
+            <select class="form-select" required>
+              <option value="">Select payment method</option>
+              <option value="bank">Bank Transfer (ACH)</option>
+              <option value="wire">Wire Transfer</option>
+              <option value="card">Credit/Debit Card</option>
+              <option value="crypto">Cryptocurrency</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Select Source Account</label>
+            <select class="form-select">
+              <option value="chase">Chase Bank ****4521</option>
+              <option value="visa">Visa Card ****8834</option>
+              <option value="btc">Bitcoin Wallet</option>
+            </select>
+          </div>
+
+          <div style="background: var(--green-rgba); padding: var(--spacing-md); border-radius: var(--radius-lg); margin-bottom: var(--spacing-md);">
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">
+              <i class="fas fa-info-circle" style="color: var(--green-primary); margin-right: 4px;"></i>
+              Bank transfers are typically instant. Wire transfers may take 1-2 business days.
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close">Cancel</button>
+        <button class="btn btn-primary">
+          <i class="fas fa-lock"></i> Deposit Securely
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Withdraw Modal -->
+  <div class="modal-overlay" id="withdraw-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fas fa-arrow-up-from-bracket" style="color: var(--green-primary); margin-right: 8px;"></i> Withdraw Funds</h3>
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form data-validate>
+          <div class="form-group">
+            <label class="form-label">Available Balance</label>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--green-primary);">$89,750.00</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Withdrawal Amount (USD)</label>
+            <input type="number" class="form-input" placeholder="Enter amount" required min="10" max="89750">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Withdraw To</label>
+            <select class="form-select" required>
+              <option value="">Select destination</option>
+              <option value="chase">Chase Bank ****4521</option>
+              <option value="visam">Visa Card ****8834</option>
+              <option value="btc">Bitcoin Wallet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Withdrawal Speed</label>
+            <div style="display: flex; gap: var(--spacing-md);">
+              <button type="button" class="btn btn-secondary" style="flex: 1; flex-direction: column; padding: var(--spacing-md);">
+                <i class="fas fa-bolt" style="color: var(--green-primary);"></i>
+                <span>Express</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Instant - $15 fee</span>
+              </button>
+              <button type="button" class="btn btn-secondary" style="flex: 1; flex-direction: column; padding: var(--spacing-md);">
+                <i class="fas fa-clock"></i>
+                <span>Standard</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">1-3 days - Free</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close">Cancel</button>
+        <button class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Withdraw Funds
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

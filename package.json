@@ -1,0 +1,13 @@
+{
+  "name": "securepay-escrow",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Professional Escrow Platform - Secure transactions for modern businesses",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build required'"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
