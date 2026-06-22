@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how SecurePay Escrow works - Simple, secure escrow process for buyers and sellers.">
+  <title>How It Works - SecurePay Escrow</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128274;</text></svg>">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-shield-halved"></i>
+        <span>Secure<span class="highlight">Pay</span></span>
+      </a>
+
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link active">Services <i class="fas fa-chevron-down" style="font-size: 0.625rem; margin-left: 4px;"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="how-it-works.html" class="nav-dropdown-item">How It Works</a>
+            <a href="security.html" class="nav-dropdown-item">Security</a>
+            <a href="deals.html" class="nav-dropdown-item">Deals</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+        <a href="#" class="btn btn-primary" data-modal="create-deal-modal">
+          <i class="fas fa-plus"></i> Create Deal
+        </a>
+      </div>
+
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>How SecurePay <span class="text-gradient">Works</span></h1>
+      <p>A step-by-step guide to secure escrow transactions that protect both buyers and sellers.</p>
+    </div>
+  </section>
+
+  <!-- Process Steps -->
+  <section class="process-steps section">
+    <div class="container">
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-step" data-animate>
+          <div class="process-content">
+            <div class="process-number">01</div>
+            <h3>Create Your <span class="text-gradient">Deal</span></h3>
+            <p>Start by creating a new escrow deal. Specify the transaction details including amount, description of goods or services, and invite the counterparty to participate.</p>
+            <ul class="process-list">
+              <li><i class="fas fa-check-circle"></i> Define transaction terms clearly</li>
+              <li><i class="fas fa-check-circle"></i> Set deadlines and milestones</li>
+              <li><i class="fas fa-check-circle"></i> Invite buyer or seller</li>
+              <li><i class="fas fa-check-circle"></i> Both parties review and agree</li>
+            </ul>
+          </div>
+          <div class="process-visual">
+            <i class="fas fa-file-contract"></i>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step" data-animate>
+          <div class="process-content">
+            <div class="process-number">02</div>
+            <h3>Buyer <span class="text-gradient">Deposits Funds</span></h3>
+            <p>Once both parties agree to terms, the buyer securely deposits the payment into our protected escrow account. Funds are held safely until delivery is confirmed.</p>
+            <ul class="process-list">
+              <li><i class="fas fa-check-circle"></i> Multiple payment options available</li>
+              <li><i class="fas fa-check-circle"></i> Bank-level encryption</li>
+              <li><i class="fas fa-check-circle"></i> Instant deposit confirmation</li>
+              <li><i class="fas fa-check-circle"></i> Seller notified immediately</li>
+            </ul>
+          </div>
+          <div class="process-visual">
+            <i class="fas fa-credit-card"></i>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step" data-animate>
+          <div class="process-content">
+            <div class="process-number">03</div>
+            <h3>Seller <span class="text-gradient">Delivers</span></h3>
+            <p>With funds secured, the seller ships goods or provides services. Upload tracking numbers, delivery confirmation, or completion proof to the platform.</p>
+            <ul class="process-list">
+              <li><i class="fas fa-check-circle"></i> Upload delivery documentation</li>
+              <li><i class="fas fa-check-circle"></i> Real-time tracking updates</li>
+              <li><i class="fas fa-check-circle"></i> Buyer receives notifications</li>
+              <li><i class="fas fa-check-circle"></i> Secure document storage</li>
+            </ul>
+          </div>
+          <div class="process-visual">
+            <i class="fas fa-truck"></i>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step" data-animate>
+          <div class="process-content">
+            <div class="process-number">04</div>
+            <h3>Buyer <span class="text-gradient">Inspects</span></h3>
+            <p>The buyer has a predetermined inspection period to verify goods or services. Test the product, review the work, and confirm everything meets expectations.</p>
+            <ul class="process-list">
+              <li><i class="fas fa-check-circle"></i> Configurable inspection period</li>
+              <li><i class="fas fa-check-circle"></i> Request modifications if needed</li>
+              <li><i class="fas fa-check-circle"></i> Communication portal built-in</li>
+              <li><i class="fas fa-check-circle"></i> Automatic reminders</li>
+            </ul>
+          </div>
+          <div class="process-visual">
+            <i class="fas fa-magnifying-glass"></i>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="process-step" data-animate>
+          <div class="process-content">
+            <div class="process-number">05</div>
+            <h3>Funds <span class="text-gradient">Released</span></h3>
+            <p>Upon buyer confirmation or after the inspection period ends, funds are automatically released to the seller's wallet for withdrawal or future transactions.</p>
+            <ul class="process-list">
+              <li><i class="fas fa-check-circle"></i> Instant wallet transfer</li>
+              <li><i class="fas fa-check-circle"></i> Multiple withdrawal options</li>
+              <li><i class="fas fa-check-circle"></i> Transaction receipt generated</li>
+              <li><i class="fas fa-check-circle"></i> Complete audit trail</li>
+            </ul>
+          </div>
+          <div class="process-visual">
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Protection Section -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Built-In <span class="text-gradient">Protections</span></h2>
+        <p>Every transaction includes multiple layers of security and protection.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="card feature-card" data-animate>
+          <div class="feature-icon">
+            <i class="fas fa-shield-heart"></i>
+          </div>
+          <h4 class="feature-title">Buyer Protection</h4>
+          <p class="feature-desc">If seller fails to deliver or goods don't match description, funds are returned to buyer automatically.</p>
+        </div>
+
+        <div class="card feature-card" data-animate data-delay="1">
+          <div class="feature-icon">
+            <i class="fas fa-hand-holding-dollar"></i>
+          </div>
+          <h4 class="feature-title">Seller Protection</h4>
+          <p class="feature-desc">Once buyer confirms delivery, funds are guaranteed. No chargebacks or payment reversals.</p>
+        </div>
+
+        <div class="card feature-card" data-animate data-delay="2">
+          <div class="feature-icon">
+            <i class="fas fa-scale-balanced"></i>
+          </div>
+          <h4 class="feature-title">Fair Arbitration</h4>
+          <p class="feature-desc">If disputes arise, our professional team reviews evidence and makes impartial decisions.</p>
+        </div>
+
+        <div class="card feature-card" data-animate data-delay="3">
+          <div class="feature-icon">
+            <i class="fas fa-clock-rotate-left"></i>
+          </div>
+          <h4 class="feature-title">Auto-Release</h4>
+          <p class="feature-desc">If buyer doesn't respond within inspection period, funds auto-release to prevent delays.</p>
+        </div>
+
+        <div class="card feature-card" data-animate>
+          <div class="feature-icon">
+            <i class="fas fa-vault"></i>
+          </div>
+          <h4 class="feature-title">Secure Storage</h4>
+          <p class="feature-desc">Funds held in segregated FDIC-insured accounts, never commingled with operating funds.</p>
+        </div>
+
+        <div class="card feature-card" data-animate data-delay="1">
+          <div class="feature-icon">
+            <i class="fas fa-file-signature"></i>
+          </div>
+          <h4 class="feature-title">Digital Agreements</h4>
+          <p class="feature-desc">Terms are recorded and legally binding. Both parties have access to complete documentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dispute Flow Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Dispute Resolution <span class="text-gradient">Process</span></h2>
+        <p>If issues arise, our streamlined process ensures fair outcomes.</p>
+      </div>
+
+      <div class="steps-timeline">
+        <div class="step-item" data-animate>
+          <div class="step-number">1</div>
+          <div class="step-icon"><i class="fas fa-flag"></i></div>
+          <h4 class="step-title">Dispute Raised</h4>
+          <p class="step-desc">Either party can raise a dispute within the inspection period with reason and evidence.</p>
+        </div>
+
+        <div class="step-item" data-animate data-delay="1">
+          <div class="step-number">2</div>
+          <div class="step-icon"><i class="fas fa-file-lines"></i></div>
+          <h4 class="step-title">Evidence Collection</h4>
+          <p class="step-desc">Both parties submit documentation, communications, and supporting evidence.</p>
+        </div>
+
+        <div class="step-item" data-animate data-delay="2">
+          <div class="step-number">3</div>
+          <div class="step-icon"><i class="fas fa-user-tie"></i></div>
+          <h4 class="step-title">Arbitration Review</h4>
+          <p class="step-desc">Our professional team reviews all evidence within 5-7 business days.</p>
+        </div>
+
+        <div class="step-item" data-animate data-delay="3">
+          <div class="step-number">4</div>
+          <div class="step-icon"><i class="fas fa-gavel"></i></div>
+          <h4 class="step-title">Fair Decision</h4>
+          <p class="step-desc">Decision made with detailed explanation. Appeal process available if needed.</p>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--spacing-2xl);">
+        <a href="disputes.html" class="btn btn-outline">
+          Learn More About Disputes <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Types -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Transaction <span class="text-gradient">Timelines</span></h2>
+        <p>Understanding the timeline for different transaction types.</p>
+      </div>
+
+      <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="card" data-animate style="text-align: left; padding: var(--spacing-2xl);">
+          <div style="display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+            <div class="feature-icon" style="margin: 0;">
+              <i class="fas fa-box"></i>
+            </div>
+            <h4 style="margin: 0;">Physical Goods</h4>
+          </div>
+          <table style="width: 100%; color: var(--text-muted);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: var(--spacing-sm) 0;">Deal Creation</td>
+              <td style="text-align: right;">5 minutes</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: var(--spacing-sm) 0;">Fund Deposit</td>
+              <td style="text-align: right;">Instant - 3 days</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: var(--spacing-sm) 0;">Shipping Period</td>
+              <td style="text-align: right;">3-14 days</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: var(--spacing-sm) 0;">Inspection Period</td>
+              <td style="text-align: right;">3-30 days</td>
+            </tr>
+            <tr>
+              <td style="padding: var(--spacing-sm) 0;">Fund Release</td>
+              <td style="text-align: right;">Instant</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="card" data-animate data-delay="1" style="text-align: left; padding: var(--spacing-2xl);">
+          <div style="display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+            <div class="feature-icon" style="margin: 0;">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h4 style="margin: 0;">Digital Services</h4>
+          </div>
+          <table style="width: 100%; color: var(--text-muted);">
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: var(--spacing-sm) 0;">Deal Creation</td>
+              <td style="text-align: right;">5 minutes</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: var(--spacing-sm) 0;">Fund Deposit</td>
+              <td style="text-align: right;">Instant - 3 days</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: var(--spacing-sm) 0;">Work Completion</td>
+              <td style="text-align: right;">Varies by project</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: var(--spacing-sm) 0;">Review Period</td>
+              <td style="text-align: right;">3-14 days</td>
+            </tr>
+            <tr>
+              <td style="padding: var(--spacing-sm) 0;">Fund Release</td>
+              <td style="text-align: right;">Instant</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta section">
+    <div class="container">
+      <div class="cta-card" data-animate>
+        <h2>Ready to Start Your <span class="text-gradient">First Deal</span>?</h2>
+        <p>Create a secure escrow transaction in under 5 minutes. No commitment required.</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary btn-lg" data-modal="create-deal-modal">
+            <i class="fas fa-plus"></i> Create Deal Now
+          </a>
+          <a href="contact.html" class="btn btn-secondary btn-lg">
+            <i class="fas fa-question-circle"></i> Have Questions?
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <i class="fas fa-shield-halved"></i>
+            <span>Secure<span class="highlight">Pay</span></span>
+          </a>
+          <p>Enterprise-grade escrow services for secure transactions between buyers and sellers worldwide.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Product</h5>
+          <ul class="footer-links">
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="deals.html">Deals</a></li>
+            <li><a href="wallet.html">Wallet</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Company</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Support</h5>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">API Documentation</a></li>
+            <li><a href="disputes.html">Dispute Center</a></li>
+            <li><a href="#">Status Page</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 SecurePay Escrow. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Create Deal Modal -->
+  <div class="modal-overlay" id="create-deal-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fas fa-plus-circle" style="color: var(--green-primary); margin-right: 8px;"></i> Create New Deal</h3>
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form data-validate>
+          <div class="form-group">
+            <label class="form-label">Deal Title</label>
+            <input type="text" class="form-input" placeholder="e.g., Website Development Project" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Amount (USD)</label>
+              <input type="number" class="form-input" placeholder="10,000" required min="1">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Role</label>
+              <select class="form-select" required>
+                <option value="">Select role</option>
+                <option value="buyer">Buyer</option>
+                <option value="seller">Seller</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Counterparty Email</label>
+            <input type="email" class="form-input" placeholder="partner@company.com" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Inspection Period</label>
+              <select class="form-select">
+                <option value="3">3 Days</option>
+                <option value="7" selected>7 Days</option>
+                <option value="14">14 Days</option>
+                <option value="30">30 Days</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Deal Deadline</label>
+              <input type="date" class="form-input">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Deal Description</label>
+            <textarea class="form-textarea" placeholder="Describe the goods or services being exchanged..." required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close">Cancel</button>
+        <button class="btn btn-primary">
+          <i class="fas fa-lock"></i> Create Secure Deal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

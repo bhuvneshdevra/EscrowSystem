@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SecurePay Dispute Center - Manage and track escrow disputes with evidence submission and resolution tracking.">
+  <title>Disputes - SecurePay Escrow</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128274;</text></svg>">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <i class="fas fa-shield-halved"></i>
+        <span>Secure<span style="color: var(--green-primary);">Pay</span></span>
+      </div>
+
+      <nav class="sidebar-menu">
+        <span class="sidebar-menu-title">Main Menu</span>
+        <div class="sidebar-menu-items">
+          <a href="dashboard.html" class="sidebar-link">
+            <i class="fas fa-chart-grid"></i>
+            <span>Overview</span>
+          </a>
+          <a href="deals.html" class="sidebar-link">
+            <i class="fas fa-file-contract"></i>
+            <span>Deals</span>
+          </a>
+          <a href="wallet.html" class="sidebar-link">
+            <i class="fas fa-wallet"></i>
+            <span>Wallet</span>
+          </a>
+          <a href="disputes.html" class="sidebar-link active">
+            <i class="fas fa-gavel"></i>
+            <span>Disputes</span>
+          </a>
+        </div>
+      </nav>
+
+      <nav class="sidebar-menu">
+        <span class="sidebar-menu-title">Analytics</span>
+        <div class="sidebar-menu-items">
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-chart-line"></i>
+            <span>Reports</span>
+          </a>
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-chart-bar"></i>
+            <span>Statistics</span>
+          </a>
+        </div>
+      </nav>
+
+      <nav class="sidebar-menu">
+        <span class="sidebar-menu-title">Settings</span>
+        <div class="sidebar-menu-items">
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-gear"></i>
+            <span>Settings</span>
+          </a>
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-user-circle"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-avatar">JD</div>
+          <div>
+            <div class="sidebar-user-name">John Doe</div>
+            <div class="sidebar-user-email">john@company.com</div>
+          </div>
+        </div>
+        <a href="index.html" class="btn btn-secondary btn-sm" style="width: 100%;">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <div class="dashboard-header">
+        <div class="dashboard-title">
+          <h1>Dispute Center</h1>
+          <p>Manage and track all your escrow disputes.</p>
+        </div>
+        <div class="dashboard-actions">
+          <button class="notification-btn">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Disputes Stats -->
+      <div class="disputes-stats" data-animate>
+        <div class="card dispute-stat-card">
+          <div class="dispute-stat-value" style="color: #f59e0b;">2</div>
+          <div class="dispute-stat-label">Open Disputes</div>
+        </div>
+        <div class="card dispute-stat-card" data-animate data-delay="1">
+          <div class="dispute-stat-value" style="color: var(--green-primary);">18</div>
+          <div class="dispute-stat-label">Resolved</div>
+        </div>
+        <div class="card dispute-stat-card" data-animate data-delay="2">
+          <div class="dispute-stat-value" style="color: #8b5cf6;">98%</div>
+          <div class="dispute-stat-label">Resolution Rate</div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="disputes-tabs" data-animate>
+        <button class="dispute-tab active">All Disputes</button>
+        <button class="dispute-tab">Open (2)</button>
+        <button class="dispute-tab">In Review (1)</button>
+        <button class="dispute-tab">Resolved</button>
+      </div>
+
+      <!-- Open Disputes -->
+      <div data-animate>
+        <h3 style="font-size: 1.125rem; margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+          <i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i> Open Disputes
+        </h3>
+
+        <!-- Dispute Card 1 -->
+        <div class="card dispute-card card-glass" style="border-color: rgba(245, 158, 11, 0.3);">
+          <div class="dispute-header">
+            <div class="dispute-info">
+              <div class="dispute-id">Dispute #DSP-2024-0089</div>
+              <h4 class="dispute-title">Product Not As Described</h4>
+              <div class="dispute-amount">Deal ESC-2024-78285 - $45,000.00</div>
+            </div>
+            <span class="deal-status pending">In Review</span>
+          </div>
+
+          <div class="dispute-meta">
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Opened On</span>
+              <span class="dispute-meta-value">Jan 12, 2025</span>
+            </div>
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Counterparty</span>
+              <span class="dispute-meta-value">Software Co.</span>
+            </div>
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Your Role</span>
+              <span class="dispute-meta-value">Buyer</span>
+            </div>
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Assigned Agent</span>
+              <span class="dispute-meta-value">Sarah Kim</span>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-card-solid); padding: var(--spacing-md); border-radius: var(--radius-lg); margin-bottom: var(--spacing-lg);">
+            <h5 style="font-size: 0.875rem; margin-bottom: var(--spacing-sm);">Reason Submitted</h5>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">
+              The software delivered does not match the specifications outlined in the agreement. Key features are missing and the product is not functional as described.
+            </p>
+          </div>
+
+          <div class="dispute-timeline">
+            <div class="timeline-item">
+              <i class="fas fa-circle"></i>
+              <span>Dispute Opened - Jan 12</span>
+            </div>
+            <div class="timeline-item">
+              <i class="fas fa-circle"></i>
+              <span>Evidence Submitted - Jan 13</span>
+            </div>
+            <div class="timeline-item">
+              <i class="fas fa-circle"></i>
+              <span>Counterparty Response - Jan 14</span>
+            </div>
+            <div class="timeline-item">
+              <i class="fas fa-circle"></i>
+              <span>Under Review - Current</span>
+            </div>
+          </div>
+
+          <div class="dispute-actions" style="margin-top: var(--spacing-lg);">
+            <button class="btn btn-primary btn-sm">
+              <i class="fas fa-upload"></i> Upload Evidence
+            </button>
+            <button class="btn btn-secondary btn-sm">
+              <i class="fas fa-message"></i> Send Message
+            </button>
+            <button class="btn btn-outline btn-sm">
+              <i class="fas fa-eye"></i> View Full Case
+            </button>
+          </div>
+        </div>
+
+        <!-- Dispute Card 2 -->
+        <div class="card dispute-card">
+          <div class="dispute-header">
+            <div class="dispute-info">
+              <div class="dispute-id">Dispute #DSP-2024-0091</div>
+              <h4 class="dispute-title">Delayed Delivery</h4>
+              <div class="dispute-amount">Deal ESC-2024-78308 - $8,200.00</div>
+            </div>
+            <span class="deal-status active">Awaiting Response</span>
+          </div>
+
+          <div class="dispute-meta">
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Opened On</span>
+              <span class="dispute-meta-value">Jan 18, 2025</span>
+            </div>
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Counterparty</span>
+              <span class="dispute-meta-value">Digital Services LLC</span>
+            </div>
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Your Role</span>
+              <span class="dispute-meta-value">Seller</span>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-card-solid); padding: var(--spacing-md); border-radius: var(--radius-lg); margin-bottom: var(--spacing-lg);">
+            <h5 style="font-size: 0.875rem; margin-bottom: var(--spacing-sm);">Reason Submitted</h5>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">
+              Buyer claims delivery was delayed beyond the agreed deadline. However, the delay was due to buyer's request for modifications.
+            </p>
+          </div>
+
+          <div class="dispute-timeline">
+            <div class="timeline-item">
+              <i class="fas fa-circle"></i>
+              <span>Dispute Opened - Jan 18</span>
+            </div>
+            <div class="timeline-item">
+              <i class="fas fa-circle"></i>
+              <span>Evidence Requested</span>
+            </div>
+          </div>
+
+          <div class="dispute-actions" style="margin-top: var(--spacing-lg);">
+            <button class="btn btn-primary btn-sm">
+              <i class="fas fa-upload"></i> Upload Evidence
+            </button>
+            <button class="btn btn-secondary btn-sm">
+              <i class="fas fa-message"></i> Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resolved Disputes -->
+      <div style="margin-top: var(--spacing-3xl);" data-animate>
+        <h3 style="font-size: 1.125rem; margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+          <i class="fas fa-check-circle" style="color: var(--green-primary);"></i> Recently Resolved
+        </h3>
+
+        <div class="card dispute-card" style="border-color: rgba(34, 197, 94, 0.3);">
+          <div class="dispute-header">
+            <div class="dispute-info">
+              <div class="dispute-id">Dispute #DSP-2024-0078</div>
+              <h4 class="dispute-title">Incomplete Delivery</h4>
+              <div class="dispute-amount">Deal ESC-2024-78240 - $12,500.00</div>
+            </div>
+            <span class="deal-status completed">Resolved - Refund</span>
+          </div>
+
+          <div class="dispute-meta">
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Resolved On</span>
+              <span class="dispute-meta-value">Jan 5, 2025</span>
+            </div>
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Outcome</span>
+              <span class="dispute-meta-value" style="color: var(--green-primary);">Full Refund Granted</span>
+            </div>
+          </div>
+
+          <div style="background: var(--green-rgba); padding: var(--spacing-md); border-radius: var(--radius-lg); margin-top: var(--spacing-lg);">
+            <p style="font-size: 0.875rem;">
+              <i class="fas fa-info-circle" style="color: var(--green-primary); margin-right: 8px;"></i>
+              Arbitration determined the seller failed to deliver the complete product. Funds returned to buyer.
+            </p>
+          </div>
+        </div>
+
+        <div class="card dispute-card" style="border-color: rgba(34, 197, 94, 0.3); margin-top: var(--spacing-md);">
+          <div class="dispute-header">
+            <div class="dispute-info">
+              <div class="dispute-id">Dispute #DSP-2024-0072</div>
+              <h4 class="dispute-title">Quality Disagreement</h4>
+              <div class="dispute-amount">Deal ESC-2024-78210 - $25,000.00</div>
+            </div>
+            <span class="deal-status completed">Resolved - Split</span>
+          </div>
+
+          <div class="dispute-meta">
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Resolved On</span>
+              <span class="dispute-meta-value">Dec 28, 2024</span>
+            </div>
+            <div class="dispute-meta-item">
+              <span class="dispute-meta-label">Outcome</span>
+              <span class="dispute-meta-value" style="color: #3b82f6;">Partial Refund (40%)</span>
+            </div>
+          </div>
+
+          <div style="background: rgba(59, 130, 246, 0.1); padding: var(--spacing-md); border-radius: var(--radius-lg); margin-top: var(--spacing-lg);">
+            <p style="font-size: 0.875rem;">
+              <i class="fas fa-info-circle" style="color: #3b82f6; margin-right: 8px;"></i>
+              Both parties shared responsibility. Buyer received $10,000 refund; seller retained $15,000.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evidence Upload Section -->
+      <div class="card" style="margin-top: var(--spacing-3xl);" data-animate>
+        <h3 style="font-size: 1.125rem; margin-bottom: var(--spacing-lg);">
+          <i class="fas fa-upload" style="color: var(--green-primary); margin-right: 8px;"></i>
+          Submit Evidence
+        </h3>
+
+        <div class="evidence-upload" style="border: 2px dashed var(--border-color); border-radius: var(--radius-lg); padding: var(--spacing-2xl); text-align: center; margin-bottom: var(--spacing-lg);">
+          <input type="file" id="evidence-upload" style="display: none;" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+          <label for="evidence-upload" style="cursor: pointer;">
+            <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; color: var(--green-primary); margin-bottom: var(--spacing-md); display: block;"></i>
+            <h4 style="margin-bottom: var(--spacing-sm);">Drop files here or click to upload</h4>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">PDF, Images, Documents - Max 25MB each</p>
+          </label>
+          <div class="upload-preview"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Select Related Dispute</label>
+          <select class="form-select">
+            <option value="">Select dispute</option>
+            <option value="1">DSP-2024-0089 - Product Not As Described</option>
+            <option value="2">DSP-2024-0091 - Delayed Delivery</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Evidence Description</label>
+          <textarea class="form-textarea" placeholder="Describe what this evidence proves..."></textarea>
+        </div>
+
+        <button class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Submit Evidence
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

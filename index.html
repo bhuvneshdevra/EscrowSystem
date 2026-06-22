@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SecurePay Escrow - Secure escrow payments for modern businesses. Buyer and seller protection with fraud prevention and dispute resolution.">
+  <meta name="keywords" content="escrow, secure payments, buyer protection, seller protection, fraud prevention, secure transactions">
+  <title>SecurePay Escrow - Secure Escrow Payments for Modern Businesses</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128274;</text></svg>">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-shield-halved"></i>
+        <span>Secure<span class="highlight">Pay</span></span>
+      </a>
+
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link">Services <i class="fas fa-chevron-down" style="font-size: 0.625rem; margin-left: 4px;"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="how-it-works.html" class="nav-dropdown-item">How It Works</a>
+            <a href="security.html" class="nav-dropdown-item">Security</a>
+            <a href="deals.html" class="nav-dropdown-item">Deals</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+        <a href="#" class="btn btn-primary" data-modal="create-deal-modal">
+          <i class="fas fa-plus"></i> Create Deal
+        </a>
+      </div>
+
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text" data-animate>
+          <h1>Secure Escrow Payments <span class="text-gradient">For Modern Businesses</span></h1>
+          <p class="subtitle">Protect every transaction with our enterprise-grade escrow platform. Full buyer and seller protection with real-time fraud detection, automated dispute resolution, and instant fund releases.</p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary btn-lg" data-modal="create-deal-modal">
+              <i class="fas fa-plus"></i> Create Deal
+            </a>
+            <a href="how-it-works.html" class="btn btn-secondary btn-lg">
+              <i class="fas fa-play-circle"></i> Learn More
+            </a>
+          </div>
+          <div class="hero-trust">
+            <div class="hero-trust-item">
+              <i class="fas fa-shield-check"></i>
+              <span>Secure Transactions</span>
+            </div>
+            <div class="hero-trust-item">
+              <i class="fas fa-user-shield"></i>
+              <span>Fraud Protection</span>
+            </div>
+            <div class="hero-trust-item">
+              <i class="fas fa-gavel"></i>
+              <span>Dispute Resolution</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-animate data-delay="2">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <span class="hero-card-title">Active Escrow</span>
+              <span class="hero-card-badge">
+                <i class="fas fa-circle" style="font-size: 0.5rem; margin-right: 4px;"></i> Live
+              </span>
+            </div>
+            <div class="hero-card-amount text-gradient">$24,850.00</div>
+            <div class="hero-card-details">
+              <div class="hero-card-row">
+                <span class="label">Deal ID</span>
+                <span class="value">ESC-2024-78291</span>
+              </div>
+              <div class="hero-card-row">
+                <span class="label">Buyer</span>
+                <span class="value">TechCorp Inc.</span>
+              </div>
+              <div class="hero-card-row">
+                <span class="label">Seller</span>
+                <span class="value">Global Services Ltd.</span>
+              </div>
+              <div class="hero-card-row">
+                <span class="label">Status</span>
+                <span class="value" style="color: var(--green-primary);">Funds Secured</span>
+              </div>
+              <div class="hero-card-row">
+                <span class="label">Release In</span>
+                <span class="value">3 Days 12 Hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-animate>
+          <div class="stat-number" data-count="4200000000" data-prefix="$" data-suffix="+">$4.2B+</div>
+          <div class="stat-label">Protected Value</div>
+        </div>
+        <div class="stat-item" data-animate data-delay="1">
+          <div class="stat-number" data-count="180000" data-suffix="+">180K+</div>
+          <div class="stat-label">Deals Completed</div>
+        </div>
+        <div class="stat-item" data-animate data-delay="2">
+          <div class="stat-number" data-count="99.98" data-suffix="%">99.98%</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+        <div class="stat-item" data-animate data-delay="3">
+          <div class="stat-number" data-count="120" data-suffix="+">120+</div>
+          <div class="stat-label">Countries Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Enterprise-Grade <span class="text-gradient">Protection</span></h2>
+        <p>Comprehensive security features designed to protect both buyers and sellers in every transaction.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="card feature-card" data-animate>
+          <div class="feature-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h4 class="feature-title">Buyer Protection</h4>
+          <p class="feature-desc">Funds held securely until delivery confirmation. Full refund guaranteed if seller fails to deliver.</p>
+        </div>
+
+        <div class="card feature-card" data-animate data-delay="1">
+          <div class="feature-icon">
+            <i class="fas fa-store-lock"></i>
+          </div>
+          <h4 class="feature-title">Seller Protection</h4>
+          <p class="feature-desc">Guaranteed payment upon verified delivery. Protection against chargebacks and fraudulent claims.</p>
+        </div>
+
+        <div class="card feature-card" data-animate data-delay="2">
+          <div class="feature-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h4 class="feature-title">Escrow Wallet</h4>
+          <p class="feature-desc">Secure digital wallet with multi-signature authentication and real-time balance tracking.</p>
+        </div>
+
+        <div class="card feature-card" data-animate data-delay="3">
+          <div class="feature-icon">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <h4 class="feature-title">Dispute Resolution</h4>
+          <p class="feature-desc">Professional arbitration team ensures fair outcomes with documented evidence tracking.</p>
+        </div>
+
+        <div class="card feature-card" data-animate>
+          <div class="feature-icon">
+            <i class="fas fa-fingerprint"></i>
+          </div>
+          <h4 class="feature-title">Identity Verification</h4>
+          <p class="feature-desc">KYC/AML compliant verification process with biometric authentication options.</p>
+        </div>
+
+        <div class="card feature-card" data-animate data-delay="1">
+          <div class="feature-icon">
+            <i class="fas fa-file-shield"></i>
+          </div>
+          <h4 class="feature-title">Audit Logs</h4>
+          <p class="feature-desc">Complete transaction history with immutable audit trails for compliance and transparency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>How It <span class="text-gradient">Works</span></h2>
+        <p>Simple, secure, and transparent escrow process designed for peace of mind.</p>
+      </div>
+
+      <div class="steps-timeline">
+        <div class="step-item" data-animate>
+          <div class="step-number">1</div>
+          <div class="step-icon"><i class="fas fa-file-contract"></i></div>
+          <h4 class="step-title">Create Deal</h4>
+          <p class="step-desc">Set up the transaction terms, amount, and both parties' details in minutes.</p>
+        </div>
+
+        <div class="step-item" data-animate data-delay="1">
+          <div class="step-number">2</div>
+          <div class="step-icon"><i class="fas fa-credit-card"></i></div>
+          <h4 class="step-title">Buyer Deposits</h4>
+          <p class="step-desc">Buyer securely deposits funds into the escrow account for safekeeping.</p>
+        </div>
+
+        <div class="step-item" data-animate data-delay="2">
+          <div class="step-number">3</div>
+          <div class="step-icon"><i class="fas fa-truck"></i></div>
+          <h4 class="step-title">Seller Delivers</h4>
+          <p class="step-desc">Seller ships goods or provides services with tracking and documentation.</p>
+        </div>
+
+        <div class="step-item" data-animate data-delay="3">
+          <div class="step-number">4</div>
+          <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+          <h4 class="step-title">Funds Released</h4>
+          <p class="step-desc">Upon buyer confirmation, funds are instantly released to the seller.</p>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--spacing-2xl);">
+        <a href="how-it-works.html" class="btn btn-outline">
+          View Full Process <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Trusted by <span class="text-gradient">Thousands</span></h2>
+        <p>See what businesses and individuals say about their SecurePay experience.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="card testimonial-card" data-animate>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"SecurePay has transformed how we handle large B2B transactions. The escrow service gives both parties confidence, and the dispute resolution saved us over $50,000 last year."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MC</div>
+            <div>
+              <div class="testimonial-name">Michael Chen</div>
+              <div class="testimonial-role">CEO, TechFlow Solutions</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card testimonial-card" data-animate data-delay="1">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"As a freelancer, getting paid was always stressful. Now I use SecurePay for every project over $1,000. The buyer deposits first, I deliver, and payment is guaranteed."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SR</div>
+            <div>
+              <div class="testimonial-name">Sarah Rodriguez</div>
+              <div class="testimonial-role">Freelance Developer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card testimonial-card" data-animate data-delay="2">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"We've processed over $2 million through SecurePay with zero issues. The platform is intuitive, support is responsive, and our clients appreciate the security."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JM</div>
+            <div>
+              <div class="testimonial-name">James Mitchell</div>
+              <div class="testimonial-role">Director, Global Imports Ltd</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Simple, Transparent <span class="text-gradient">Pricing</span></h2>
+        <p>Choose the plan that fits your transaction volume. No hidden fees.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="card pricing-card" data-animate>
+          <h4 class="pricing-name">Starter</h4>
+          <div class="pricing-price">$0<span>/mo</span></div>
+          <p class="pricing-desc">Pay per transaction</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Up to 5 deals/month</li>
+            <li><i class="fas fa-check"></i> 1.5% transaction fee</li>
+            <li><i class="fas fa-check"></i> Email support</li>
+            <li><i class="fas fa-check"></i> Basic dispute resolution</li>
+            <li><i class="fas fa-check"></i> Standard verification</li>
+          </ul>
+          <a href="#" class="btn btn-outline" style="width: 100%;">Get Started</a>
+        </div>
+
+        <div class="card pricing-card featured" data-animate data-delay="1">
+          <span class="pricing-badge">Most Popular</span>
+          <h4 class="pricing-name">Business</h4>
+          <div class="pricing-price">$49<span>/mo</span></div>
+          <p class="pricing-desc">For growing businesses</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Unlimited deals</li>
+            <li><i class="fas fa-check"></i> 0.8% transaction fee</li>
+            <li><i class="fas fa-check"></i> Priority support</li>
+            <li><i class="fas fa-check"></i> Advanced dispute resolution</li>
+            <li><i class="fas fa-check"></i> Premium verification</li>
+            <li><i class="fas fa-check"></i> API access</li>
+          </ul>
+          <a href="#" class="btn btn-primary" style="width: 100%;">Start Free Trial</a>
+        </div>
+
+        <div class="card pricing-card" data-animate data-delay="2">
+          <h4 class="pricing-name">Enterprise</h4>
+          <div class="pricing-price">$199<span>/mo</span></div>
+          <p class="pricing-desc">For large organizations</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Unlimited everything</li>
+            <li><i class="fas fa-check"></i> 0.4% transaction fee</li>
+            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+            <li><i class="fas fa-check"></i> White-glove dispute handling</li>
+            <li><i class="fas fa-check"></i> Custom integrations</li>
+            <li><i class="fas fa-check"></i> SLA guarantee</li>
+          </ul>
+          <a href="#" class="btn btn-outline" style="width: 100%;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+        <p>Everything you need to know about SecurePay Escrow services.</p>
+      </div>
+
+      <div class="faq-grid" data-animate>
+        <div class="faq-item active">
+          <div class="faq-question">
+            <h4>How does the escrow process work?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              The buyer deposits funds into our secure escrow account. The seller is notified and ships the goods or provides the service. Once the buyer confirms receipt and satisfaction, funds are automatically released to the seller. If any issues arise, our dispute resolution team steps in.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What payment methods are accepted?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              We accept bank transfers (ACH, Wire), credit/debit cards, and cryptocurrency (Bitcoin, Ethereum). All payment methods are processed through PCI-DSS compliant systems with bank-level encryption.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How long does fund release take?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Upon buyer confirmation, funds are released instantly to your SecurePay wallet. Bank transfers for withdrawal typically take 1-3 business days depending on your bank. Express withdrawal options are available for Business and Enterprise plans.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What happens in a dispute?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Our professional arbitration team reviews all evidence from both parties within 5-7 business days. We examine delivery confirmations, communications, and other documentation. Either party can appeal decisions, and cases with complex outcomes may be escalated to third-party arbitration.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Is my money safe?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Absolutely. All funds are held in segregated, FDIC-insured accounts. We use AES-256 encryption, multi-factor authentication, and undergo annual security audits. SecurePay is also SOC 2 Type II certified and PCI-DSS compliant.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Are there any hidden fees?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              No hidden fees. You only pay the transparent transaction fee based on your plan, or the monthly subscription for Business/Enterprise plans. Wire transfer fees may apply from your bank, but we don't charge for deposits or standard withdrawals.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta section">
+    <div class="container">
+      <div class="cta-card" data-animate>
+        <h2>Ready to <span class="text-gradient">Secure</span> Your Transactions?</h2>
+        <p>Join over 180,000 businesses who trust SecurePay for their escrow needs. Start your first deal in under 5 minutes.</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary btn-lg" data-modal="create-deal-modal">
+            <i class="fas fa-plus"></i> Create Your First Deal
+          </a>
+          <a href="contact.html" class="btn btn-secondary btn-lg">
+            <i class="fas fa-headset"></i> Talk to Sales
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <i class="fas fa-shield-halved"></i>
+            <span>Secure<span class="highlight">Pay</span></span>
+          </a>
+          <p>Enterprise-grade escrow services for secure transactions between buyers and sellers worldwide.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Product</h5>
+          <ul class="footer-links">
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="deals.html">Deals</a></li>
+            <li><a href="wallet.html">Wallet</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Company</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Support</h5>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">API Documentation</a></li>
+            <li><a href="disputes.html">Dispute Center</a></li>
+            <li><a href="#">Status Page</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 SecurePay Escrow. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Create Deal Modal -->
+  <div class="modal-overlay" id="create-deal-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fas fa-plus-circle" style="color: var(--green-primary); margin-right: 8px;"></i> Create New Deal</h3>
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form data-validate>
+          <div class="form-group">
+            <label class="form-label">Deal Title</label>
+            <input type="text" class="form-input" placeholder="e.g., Website Development Project" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Amount (USD)</label>
+              <input type="number" class="form-input" placeholder="10,000" required min="1">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Role</label>
+              <select class="form-select" required>
+                <option value="">Select role</option>
+                <option value="buyer">Buyer</option>
+                <option value="seller">Seller</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Counterparty Email</label>
+            <input type="email" class="form-input" placeholder="partner@company.com" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Inspection Period</label>
+              <select class="form-select">
+                <option value="3">3 Days</option>
+                <option value="7" selected>7 Days</option>
+                <option value="14">14 Days</option>
+                <option value="30">30 Days</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Deal Deadline</label>
+              <input type="date" class="form-input">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Deal Description</label>
+            <textarea class="form-textarea" placeholder="Describe the goods or services being exchanged..." required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close">Cancel</button>
+        <button class="btn btn-primary">
+          <i class="fas fa-lock"></i> Create Secure Deal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

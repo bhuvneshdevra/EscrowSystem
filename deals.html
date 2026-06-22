@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage your SecurePay escrow deals - View, create, and track all your transactions.">
+  <title>Deals - SecurePay Escrow</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128274;</text></svg>">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <i class="fas fa-shield-halved"></i>
+        <span>Secure<span style="color: var(--green-primary);">Pay</span></span>
+      </div>
+
+      <nav class="sidebar-menu">
+        <span class="sidebar-menu-title">Main Menu</span>
+        <div class="sidebar-menu-items">
+          <a href="dashboard.html" class="sidebar-link">
+            <i class="fas fa-chart-grid"></i>
+            <span>Overview</span>
+          </a>
+          <a href="deals.html" class="sidebar-link active">
+            <i class="fas fa-file-contract"></i>
+            <span>Deals</span>
+          </a>
+          <a href="wallet.html" class="sidebar-link">
+            <i class="fas fa-wallet"></i>
+            <span>Wallet</span>
+          </a>
+          <a href="disputes.html" class="sidebar-link">
+            <i class="fas fa-gavel"></i>
+            <span>Disputes</span>
+          </a>
+        </div>
+      </nav>
+
+      <nav class="sidebar-menu">
+        <span class="sidebar-menu-title">Analytics</span>
+        <div class="sidebar-menu-items">
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-chart-line"></i>
+            <span>Reports</span>
+          </a>
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-chart-bar"></i>
+            <span>Statistics</span>
+          </a>
+        </div>
+      </nav>
+
+      <nav class="sidebar-menu">
+        <span class="sidebar-menu-title">Settings</span>
+        <div class="sidebar-menu-items">
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-gear"></i>
+            <span>Settings</span>
+          </a>
+          <a href="#" class="sidebar-link">
+            <i class="fas fa-user-circle"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-avatar">JD</div>
+          <div>
+            <div class="sidebar-user-name">John Doe</div>
+            <div class="sidebar-user-email">john@company.com</div>
+          </div>
+        </div>
+        <a href="index.html" class="btn btn-secondary btn-sm" style="width: 100%;">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <div class="dashboard-header">
+        <div class="dashboard-title">
+          <h1>My Deals</h1>
+          <p>Manage and track all your escrow transactions.</p>
+        </div>
+        <div class="dashboard-actions">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search deals..." data-search="#deals-table">
+          </div>
+          <button class="notification-btn">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </button>
+          <a href="#" class="btn btn-primary" data-modal="create-deal-modal">
+            <i class="fas fa-plus"></i> New Deal
+          </a>
+        </div>
+      </div>
+
+      <!-- Deals Header with Filters -->
+      <div class="deals-header" data-filter-group>
+        <div class="deals-filters">
+          <button class="filter-btn active" data-filter="all">All Deals</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+          <button class="filter-btn" data-filter="disputed">Disputed</button>
+        </div>
+        <div style="display: flex; gap: var(--spacing-sm);">
+          <select class="form-select" style="width: auto; padding: 0.5rem 1rem;">
+            <option>Sort by: Recent</option>
+            <option>Sort by: Amount (High)</option>
+            <option>Sort by: Amount (Low)</option>
+            <option>Sort by: Deadline</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Deals Summary Cards -->
+      <div class="stats-cards" style="margin-bottom: var(--spacing-xl);">
+        <div class="card stats-card" data-animate>
+          <div class="stats-card-header">
+            <div class="stats-card-icon yellow">
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="stats-card-value">8</div>
+          <div class="stats-card-label">Pending</div>
+        </div>
+
+        <div class="card stats-card" data-animate data-delay="1">
+          <div class="stats-card-header">
+            <div class="stats-card-icon blue">
+              <i class="fas fa-spinner"></i>
+            </div>
+          </div>
+          <div class="stats-card-value">24</div>
+          <div class="stats-card-label">Active</div>
+        </div>
+
+        <div class="card stats-card" data-animate data-delay="2">
+          <div class="stats-card-header">
+            <div class="stats-card-icon green">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+          <div class="stats-card-value">156</div>
+          <div class="stats-card-label">Completed</div>
+        </div>
+
+        <div class="card stats-card" data-animate data-delay="3">
+          <div class="stats-card-header">
+            <div class="stats-card-icon purple">
+              <i class="fas fa-gavel"></i>
+            </div>
+          </div>
+          <div class="stats-card-value">2</div>
+          <div class="stats-card-label">Disputed</div>
+        </div>
+      </div>
+
+      <!-- Deals Table -->
+      <div class="deal-table-wrapper" data-animate>
+        <table class="deal-table" id="deals-table" data-sortable>
+          <thead>
+            <tr>
+              <th data-sort="1">Deal ID <i class="fas fa-sort" style="margin-left: 4px; font-size: 0.625rem;"></i></th>
+              <th data-sort="2">Counterparty <i class="fas fa-sort" style="margin-left: 4px; font-size: 0.625rem;"></i></th>
+              <th data-sort="3">My Role</th>
+              <th data-sort="4">Amount <i class="fas fa-sort" style="margin-left: 4px; font-size: 0.625rem;"></i></th>
+              <th data-sort="5">Status</th>
+              <th data-sort="6">Deadline <i class="fas fa-sort" style="margin-left: 4px; font-size: 0.625rem;"></i></th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-searchable data-filter-item="active">
+              <td><span class="deal-id">ESC-2024-78291</span></td>
+              <td>
+                <div class="deal-counterparty">
+                  <div class="deal-avatar">TC</div>
+                  <div>
+                    <div style="font-weight: 500;">TechCorp Inc.</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">tech@corp.com</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="deal-role seller">Seller</span></td>
+              <td><span class="deal-amount">$24,850.00</span></td>
+              <td><span class="deal-status active">Active</span></td>
+              <td class="deal-deadline">Jan 15, 2025</td>
+              <td>
+                <div class="deal-actions">
+                  <button class="deal-action-btn" title="View Details"><i class="fas fa-eye"></i></button>
+                  <button class="deal-action-btn" title="Message"><i class="fas fa-comment"></i></button>
+                  <button class="deal-action-btn" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+              </td>
+            </tr>
+
+            <tr data-searchable data-filter-item="active">
+              <td><span class="deal-id">ESC-2024-78302</span></td>
+              <td>
+                <div class="deal-counterparty">
+                  <div class="deal-avatar">GS</div>
+                  <div>
+                    <div style="font-weight: 500;">Global Services</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">info@global.com</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="deal-role buyer">Buyer</span></td>
+              <td><span class="deal-amount">$15,000.00</span></td>
+              <td><span class="deal-status active">Active</span></td>
+              <td class="deal-deadline">Jan 20, 2025</td>
+              <td>
+                <div class="deal-actions">
+                  <button class="deal-action-btn" title="View Details"><i class="fas fa-eye"></i></button>
+                  <button class="deal-action-btn" title="Message"><i class="fas fa-comment"></i></button>
+                  <button class="deal-action-btn" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+              </td>
+            </tr>
+
+            <tr data-searchable data-filter-item="pending">
+              <td><span class="deal-id">ESC-2024-78305</span></td>
+              <td>
+                <div class="deal-counterparty">
+                  <div class="deal-avatar">WD</div>
+                  <div>
+                    <div style="font-weight: 500;">WebDesign Pro</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">hello@webdesign.com</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="deal-role buyer">Buyer</span></td>
+              <td><span class="deal-amount">$8,500.00</span></td>
+              <td><span class="deal-status pending">Pending Deposit</span></td>
+              <td class="deal-deadline">Jan 25, 2025</td>
+              <td>
+                <div class="deal-actions">
+                  <button class="deal-action-btn" title="View Details"><i class="fas fa-eye"></i></button>
+                  <button class="deal-action-btn" title="Deposit"><i class="fas fa-credit-card"></i></button>
+                  <button class="deal-action-btn" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+              </td>
+            </tr>
+
+            <tr data-searchable data-filter-item="completed">
+              <td><span class="deal-id">ESC-2024-78280</span></td>
+              <td>
+                <div class="deal-counterparty">
+                  <div class="deal-avatar">MA</div>
+                  <div>
+                    <div style="font-weight: 500;">Marketing Agency</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">team@marketing.com</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="deal-role seller">Seller</span></td>
+              <td><span class="deal-amount">$12,000.00</span></td>
+              <td><span class="deal-status completed">Completed</span></td>
+              <td class="deal-deadline">Dec 28, 2024</td>
+              <td>
+                <div class="deal-actions">
+                  <button class="deal-action-btn" title="View Details"><i class="fas fa-eye"></i></button>
+                  <button class="deal-action-btn" title="Download Receipt"><i class="fas fa-download"></i></button>
+                  <button class="deal-action-btn" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+              </td>
+            </tr>
+
+            <tr data-searchable data-filter-item="disputed">
+              <td><span class="deal-id">ESC-2024-78285</span></td>
+              <td>
+                <div class="deal-counterparty">
+                  <div class="deal-avatar">SC</div>
+                  <div>
+                    <div style="font-weight: 500;">Software Co.</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">legal@software.com</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="deal-role buyer">Buyer</span></td>
+              <td><span class="deal-amount">$45,000.00</span></td>
+              <td><span class="deal-status disputed">Disputed</span></td>
+              <td class="deal-deadline">Jan 10, 2025</td>
+              <td>
+                <div class="deal-actions">
+                  <button class="deal-action-btn" title="View Details"><i class="fas fa-eye"></i></button>
+                  <button class="deal-action-btn" title="View Dispute"><i class="fas fa-gavel"></i></button>
+                  <button class="deal-action-btn" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+              </td>
+            </tr>
+
+            <tr data-searchable data-filter-item="active">
+              <td><span class="deal-id">ESC-2024-78310</span></td>
+              <td>
+                <div class="deal-counterparty">
+                  <div class="deal-avatar">DI</div>
+                  <div>
+                    <div style="font-weight: 500;">Design Inc.</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">contact@design.com</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="deal-role seller">Seller</span></td>
+              <td><span class="deal-amount">$6,750.00</span></td>
+              <td><span class="deal-status active">Active</span></td>
+              <td class="deal-deadline">Feb 1, 2025</td>
+              <td>
+                <div class="deal-actions">
+                  <button class="deal-action-btn" title="View Details"><i class="fas fa-eye"></i></button>
+                  <button class="deal-action-btn" title="Message"><i class="fas fa-comment"></i></button>
+                  <button class="deal-action-btn" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+              </td>
+            </tr>
+
+            <tr data-searchable data-filter-item="pending">
+              <td><span class="deal-id">ESC-2024-78312</span></td>
+              <td>
+                <div class="deal-counterparty">
+                  <div class="deal-avatar">DS</div>
+                  <div>
+                    <div style="font-weight: 500;">Data Solutions</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">info@data.biz</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="deal-role buyer">Buyer</span></td>
+              <td><span class="deal-amount">$32,000.00</span></td>
+              <td><span class="deal-status pending">Awaiting Approval</span></td>
+              <td class="deal-deadline">Feb 15, 2025</td>
+              <td>
+                <div class="deal-actions">
+                  <button class="deal-action-btn" title="View Details"><i class="fas fa-eye"></i></button>
+                  <button class="deal-action-btn" title="Approve"><i class="fas fa-check"></i></button>
+                  <button class="deal-action-btn" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+              </td>
+            </tr>
+
+            <tr data-searchable data-filter-item="completed">
+              <td><span class="deal-id">ESC-2024-78275</span></td>
+              <td>
+                <div class="deal-counterparty">
+                  <div class="deal-avatar">CT</div>
+                  <div>
+                    <div style="font-weight: 500;">CloudTech</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">sales@cloudtech.com</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="deal-role seller">Seller</span></td>
+              <td><span class="deal-amount">$18,500.00</span></td>
+              <td><span class="deal-status completed">Completed</span></td>
+              <td class="deal-deadline">Dec 15, 2024</td>
+              <td>
+                <div class="deal-actions">
+                  <button class="deal-action-btn" title="View Details"><i class="fas fa-eye"></i></button>
+                  <button class="deal-action-btn" title="Download Receipt"><i class="fas fa-download"></i></button>
+                  <button class="deal-action-btn" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="card" style="margin-top: var(--spacing-xl); padding: var(--spacing-md) var(--spacing-lg);">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--spacing-md);">
+          <span style="font-size: 0.875rem; color: var(--text-muted);">Showing 1-8 of 190 deals</span>
+          <div style="display: flex; gap: var(--spacing-xs);">
+            <button class="btn btn-secondary btn-sm" disabled><i class="fas fa-chevron-left"></i></button>
+            <button class="btn btn-primary btn-sm">1</button>
+            <button class="btn btn-secondary btn-sm">2</button>
+            <button class="btn btn-secondary btn-sm">3</button>
+            <button class="btn btn-secondary btn-sm">...</button>
+            <button class="btn btn-secondary btn-sm">24</button>
+            <button class="btn btn-secondary btn-sm"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Create Deal Modal -->
+  <div class="modal-overlay" id="create-deal-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fas fa-plus-circle" style="color: var(--green-primary); margin-right: 8px;"></i> Create New Deal</h3>
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form data-validate>
+          <div class="form-group">
+            <label class="form-label">Deal Title</label>
+            <input type="text" class="form-input" placeholder="e.g., Website Development Project" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Amount (USD)</label>
+              <input type="number" class="form-input" placeholder="10,000" required min="1">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Role</label>
+              <select class="form-select" required>
+                <option value="">Select role</option>
+                <option value="buyer">Buyer</option>
+                <option value="seller">Seller</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Counterparty Email</label>
+            <input type="email" class="form-input" placeholder="partner@company.com" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Inspection Period</label>
+              <select class="form-select">
+                <option value="3">3 Days</option>
+                <option value="7" selected>7 Days</option>
+                <option value="14">14 Days</option>
+                <option value="30">30 Days</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Deal Deadline</label>
+              <input type="date" class="form-input">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Deal Description</label>
+            <textarea class="form-textarea" placeholder="Describe the goods or services being exchanged..." required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close">Cancel</button>
+        <button class="btn btn-primary">
+          <i class="fas fa-lock"></i> Create Secure Deal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
